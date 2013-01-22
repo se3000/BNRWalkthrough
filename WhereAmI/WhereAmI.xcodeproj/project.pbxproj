@@ -8,27 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		921DFE7516A3495E00307F11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DFE7416A3495E00307F11 /* CoreLocation.framework */; };
+		92A2134A16AE44FB00FF84FD /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2134916AE44FB00FF84FD /* BNRMapPoint.m */; };
+		92A2136B16AE4C1400FF84FD /* WhereAmIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2136A16AE4C1400FF84FD /* WhereAmIViewController.xib */; };
+		92A2136D16AE4DA400FF84FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92A2136C16AE4DA400FF84FD /* InfoPlist.strings */; };
+		92D5D5B716ACA35B008AFCA0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5D5B616ACA35B008AFCA0 /* MapKit.framework */; };
+		92D5D5D016AE3F5E008AFCA0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D5D5BE16AE3F5E008AFCA0 /* Default-568h@2x.png */; };
+		92D5D5D116AE3F5E008AFCA0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D5D5BF16AE3F5E008AFCA0 /* Default.png */; };
+		92D5D5D216AE3F5E008AFCA0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D5D5C016AE3F5E008AFCA0 /* Default@2x.png */; };
+		92D5D5D616AE3F5E008AFCA0 /* WhereAmI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92D5D5CA16AE3F5E008AFCA0 /* WhereAmI-Info.plist */; };
 		92E1707F169E527E00F9AFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E1707E169E527E00F9AFAB /* UIKit.framework */; };
 		92E17081169E527E00F9AFAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E17080169E527E00F9AFAB /* Foundation.framework */; };
 		92E17083169E527E00F9AFAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E17082169E527E00F9AFAB /* CoreGraphics.framework */; };
-		92E17089169E527E00F9AFAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92E17087169E527E00F9AFAB /* InfoPlist.strings */; };
 		92E1708B169E527E00F9AFAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E1708A169E527E00F9AFAB /* main.m */; };
 		92E1708F169E527E00F9AFAB /* WhereAmIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E1708E169E527E00F9AFAB /* WhereAmIAppDelegate.m */; };
 		92E17091169E527E00F9AFAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E17090169E527E00F9AFAB /* Default.png */; };
 		92E17093169E527E00F9AFAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E17092169E527E00F9AFAB /* Default@2x.png */; };
 		92E17095169E527E00F9AFAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E17094169E527E00F9AFAB /* Default-568h@2x.png */; };
 		92E17098169E527E00F9AFAB /* WhereAmIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E17097169E527E00F9AFAB /* WhereAmIViewController.m */; };
-		92E1709B169E527E00F9AFAB /* WhereAmIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E17099169E527E00F9AFAB /* WhereAmIViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		921DFE7416A3495E00307F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		92A2134816AE44FB00FF84FD /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
+		92A2134916AE44FB00FF84FD /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
+		92A2136A16AE4C1400FF84FD /* WhereAmIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereAmIViewController.xib; sourceTree = "<group>"; };
+		92A2136C16AE4DA400FF84FD /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		92D5D5B616ACA35B008AFCA0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		92D5D5BE16AE3F5E008AFCA0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		92D5D5BF16AE3F5E008AFCA0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		92D5D5C016AE3F5E008AFCA0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		92D5D5C916AE3F5E008AFCA0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92D5D5CA16AE3F5E008AFCA0 /* WhereAmI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WhereAmI-Info.plist"; sourceTree = "<group>"; };
+		92D5D5CB16AE3F5E008AFCA0 /* WhereAmI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WhereAmI-Prefix.pch"; sourceTree = "<group>"; };
+		92D5D5CC16AE3F5E008AFCA0 /* WhereAmIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereAmIAppDelegate.h; sourceTree = "<group>"; };
+		92D5D5CD16AE3F5E008AFCA0 /* WhereAmIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereAmIAppDelegate.m; sourceTree = "<group>"; };
+		92D5D5CE16AE3F5E008AFCA0 /* WhereAmIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereAmIViewController.h; sourceTree = "<group>"; };
+		92D5D5CF16AE3F5E008AFCA0 /* WhereAmIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereAmIViewController.m; sourceTree = "<group>"; };
 		92E1707A169E527E00F9AFAB /* WhereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E1707E169E527E00F9AFAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92E17080169E527E00F9AFAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92E17082169E527E00F9AFAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		92E17086169E527E00F9AFAB /* WhereAmI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhereAmI-Info.plist"; sourceTree = "<group>"; };
-		92E17088169E527E00F9AFAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92E1708A169E527E00F9AFAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92E1708C169E527E00F9AFAB /* WhereAmI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereAmI-Prefix.pch"; sourceTree = "<group>"; };
 		92E1708D169E527E00F9AFAB /* WhereAmIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereAmIAppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +58,6 @@
 		92E17094169E527E00F9AFAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		92E17096169E527E00F9AFAB /* WhereAmIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereAmIViewController.h; sourceTree = "<group>"; };
 		92E17097169E527E00F9AFAB /* WhereAmIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereAmIViewController.m; sourceTree = "<group>"; };
-		92E1709A169E527E00F9AFAB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhereAmIViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D5D5B716ACA35B008AFCA0 /* MapKit.framework in Frameworks */,
 				921DFE7516A3495E00307F11 /* CoreLocation.framework in Frameworks */,
 				92E1707F169E527E00F9AFAB /* UIKit.framework in Frameworks */,
 				92E17081169E527E00F9AFAB /* Foundation.framework in Frameworks */,
@@ -56,9 +76,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92D5D5BD16AE3F5E008AFCA0 /* WhereAmI */ = {
+			isa = PBXGroup;
+			children = (
+				92D5D5BE16AE3F5E008AFCA0 /* Default-568h@2x.png */,
+				92D5D5BF16AE3F5E008AFCA0 /* Default.png */,
+				92D5D5C016AE3F5E008AFCA0 /* Default@2x.png */,
+				92D5D5C916AE3F5E008AFCA0 /* main.m */,
+				92D5D5CA16AE3F5E008AFCA0 /* WhereAmI-Info.plist */,
+				92D5D5CB16AE3F5E008AFCA0 /* WhereAmI-Prefix.pch */,
+				92D5D5CC16AE3F5E008AFCA0 /* WhereAmIAppDelegate.h */,
+				92D5D5CD16AE3F5E008AFCA0 /* WhereAmIAppDelegate.m */,
+				92D5D5CE16AE3F5E008AFCA0 /* WhereAmIViewController.h */,
+				92D5D5CF16AE3F5E008AFCA0 /* WhereAmIViewController.m */,
+			);
+			name = WhereAmI;
+			sourceTree = "<group>";
+		};
 		92E1706F169E527E00F9AFAB = {
 			isa = PBXGroup;
 			children = (
+				92D5D5B616ACA35B008AFCA0 /* MapKit.framework */,
 				921DFE7416A3495E00307F11 /* CoreLocation.framework */,
 				92E17084169E527E00F9AFAB /* WhereAmI */,
 				92E1707D169E527E00F9AFAB /* Frameworks */,
@@ -91,7 +129,10 @@
 				92E1708E169E527E00F9AFAB /* WhereAmIAppDelegate.m */,
 				92E17096169E527E00F9AFAB /* WhereAmIViewController.h */,
 				92E17097169E527E00F9AFAB /* WhereAmIViewController.m */,
-				92E17099169E527E00F9AFAB /* WhereAmIViewController.xib */,
+				92A2134816AE44FB00FF84FD /* BNRMapPoint.h */,
+				92A2134916AE44FB00FF84FD /* BNRMapPoint.m */,
+				92D5D5BD16AE3F5E008AFCA0 /* WhereAmI */,
+				92A2136A16AE4C1400FF84FD /* WhereAmIViewController.xib */,
 				92E17085169E527E00F9AFAB /* Supporting Files */,
 			);
 			path = WhereAmI;
@@ -101,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				92E17086169E527E00F9AFAB /* WhereAmI-Info.plist */,
-				92E17087169E527E00F9AFAB /* InfoPlist.strings */,
+				92A2136C16AE4DA400FF84FD /* InfoPlist.strings */,
 				92E1708A169E527E00F9AFAB /* main.m */,
 				92E1708C169E527E00F9AFAB /* WhereAmI-Prefix.pch */,
 				92E17090169E527E00F9AFAB /* Default.png */,
@@ -163,11 +204,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E17089169E527E00F9AFAB /* InfoPlist.strings in Resources */,
 				92E17091169E527E00F9AFAB /* Default.png in Resources */,
 				92E17093169E527E00F9AFAB /* Default@2x.png in Resources */,
 				92E17095169E527E00F9AFAB /* Default-568h@2x.png in Resources */,
-				92E1709B169E527E00F9AFAB /* WhereAmIViewController.xib in Resources */,
+				92D5D5D016AE3F5E008AFCA0 /* Default-568h@2x.png in Resources */,
+				92D5D5D116AE3F5E008AFCA0 /* Default.png in Resources */,
+				92D5D5D216AE3F5E008AFCA0 /* Default@2x.png in Resources */,
+				92D5D5D616AE3F5E008AFCA0 /* WhereAmI-Info.plist in Resources */,
+				92A2136B16AE4C1400FF84FD /* WhereAmIViewController.xib in Resources */,
+				92A2136D16AE4DA400FF84FD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,29 +226,11 @@
 				92E1708B169E527E00F9AFAB /* main.m in Sources */,
 				92E1708F169E527E00F9AFAB /* WhereAmIAppDelegate.m in Sources */,
 				92E17098169E527E00F9AFAB /* WhereAmIViewController.m in Sources */,
+				92A2134A16AE44FB00FF84FD /* BNRMapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		92E17087169E527E00F9AFAB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92E17088169E527E00F9AFAB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		92E17099169E527E00F9AFAB /* WhereAmIViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92E1709A169E527E00F9AFAB /* en */,
-			);
-			name = WhereAmIViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		92E1709C169E527E00F9AFAB /* Debug */ = {

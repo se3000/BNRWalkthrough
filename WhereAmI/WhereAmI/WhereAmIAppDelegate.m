@@ -7,7 +7,6 @@
 //
 
 #import "WhereAmIAppDelegate.h"
-
 #import "WhereAmIViewController.h"
 
 @implementation WhereAmIAppDelegate

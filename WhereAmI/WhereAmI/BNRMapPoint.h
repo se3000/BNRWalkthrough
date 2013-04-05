@@ -3,9 +3,6 @@
 #import <MapKit/MapKit.h>
 
 @interface BNRMapPoint : NSObject <MKAnnotation>
-{
-}
-
 - (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;

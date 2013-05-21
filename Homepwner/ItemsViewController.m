@@ -19,16 +19,12 @@
     return [self init];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
-     numberOfRowsInSection:(NSInteger)section {
-        if (section == 0) {
-            return [[[BNRItemStore sharedStore] cheapItems] count];
-        } else {
-            return [[[BNRItemStore sharedStore] notCheapItems] count];
-        }
+- (NSInteger)tableView:(UITableView *)tableView 
+ numberOfRowsInSection:(NSInteger)section {
+    return [[[BNRItemStore sharedStore] allItems] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
+- (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     if (!cell) {
@@ -36,20 +32,10 @@
                                       reuseIdentifier:@"UITableViewCell"];
     }
     
-    BNRItem *item;
-    if ([indexPath section] == 0) {
-        item = [[[BNRItemStore sharedStore] cheapItems] objectAtIndex:[indexPath row]];
-    } else {
-        item = [[[BNRItemStore sharedStore] notCheapItems] objectAtIndex:[indexPath row]];
-    }
-
+    BNRItem *item = [[BNRItemStore.sharedStore allItems] objectAtIndex:[indexPath row]];
     cell.textLabel.text = [item description];
     
     return cell;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
 }
 
 @end

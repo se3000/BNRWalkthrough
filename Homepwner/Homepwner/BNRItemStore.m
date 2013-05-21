@@ -33,21 +33,4 @@
     return newItem;
 }
 
-- (NSMutableArray *)cheapItems {
-    NSMutableArray *cheapItems = [[NSMutableArray alloc] init];
-    for (BNRItem *item in allItems) {
-        if (item.valueInDollars <= 50)
-            [cheapItems addObject:item];
-    }
-    return cheapItems;
-}
-
-- (NSMutableArray *)notCheapItems {
-    NSMutableArray *cheapItems = [[NSMutableArray alloc] init];
-    for (BNRItem *item in allItems) {
-        if (item.valueInDollars > 50)
-            [cheapItems addObject:item];
-    }
-    return cheapItems;
-}
 @end

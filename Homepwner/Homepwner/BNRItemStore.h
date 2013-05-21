@@ -10,6 +10,8 @@
 + (BNRItemStore *)sharedStore;
 
 - (NSArray *)allItems;
+- (NSMutableArray *)cheapItems;
+- (NSMutableArray *)notCheapItems;
 - (BNRItem *)createItem;
 
 @end

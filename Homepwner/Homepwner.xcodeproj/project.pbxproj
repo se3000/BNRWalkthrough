@@ -19,6 +19,8 @@
 		92102023174ADCF000E794B3 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92102022174ADCF000E794B3 /* ItemsViewController.m */; };
 		923F88A0174AE095004A64BB /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 923F889F174AE095004A64BB /* BNRItem.m */; };
 		923F88A3174AE155004A64BB /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 923F88A2174AE155004A64BB /* BNRItemStore.m */; };
+		92F80DA6174D85E20065CD2C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F80DA4174D85E20065CD2C /* DetailViewController.m */; };
+		92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F80DA5174D85E20065CD2C /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		923F889F174AE095004A64BB /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		923F88A1174AE155004A64BB /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		923F88A2174AE155004A64BB /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		92F80DA3174D85E20065CD2C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		92F80DA4174D85E20065CD2C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		92F80DA5174D85E20065CD2C /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,9 @@
 				923F88A2174AE155004A64BB /* BNRItemStore.m */,
 				92102013174ADB6900E794B3 /* HomepwnerAppDelegate.h */,
 				92102014174ADB6900E794B3 /* HomepwnerAppDelegate.m */,
+				92F80DA3174D85E20065CD2C /* DetailViewController.h */,
+				92F80DA4174D85E20065CD2C /* DetailViewController.m */,
+				92F80DA5174D85E20065CD2C /* DetailViewController.xib */,
 				9210200B174ADB6900E794B3 /* Supporting Files */,
 			);
 			path = Homepwner;
@@ -170,6 +178,7 @@
 				92102017174ADB6900E794B3 /* Default.png in Resources */,
 				92102019174ADB6900E794B3 /* Default@2x.png in Resources */,
 				9210201B174ADB6900E794B3 /* Default-568h@2x.png in Resources */,
+				92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +194,7 @@
 				92102023174ADCF000E794B3 /* ItemsViewController.m in Sources */,
 				923F88A0174AE095004A64BB /* BNRItem.m in Sources */,
 				923F88A3174AE155004A64BB /* BNRItemStore.m in Sources */,
+				92F80DA6174D85E20065CD2C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

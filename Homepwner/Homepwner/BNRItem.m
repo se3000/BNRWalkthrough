@@ -1,7 +1,7 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
-@synthesize itemName, containedItem, container, serialNumber, valueInDollars, dateCreated;
+@synthesize itemName, containedItem, container, serialNumber, valueInDollars, dateCreated, imageKey;
 @synthesize items;
 
 + (id)randomItem

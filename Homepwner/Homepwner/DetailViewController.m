@@ -1,14 +1,48 @@
 #import "DetailViewController.h"
 #import "BNRItem.h"
+#import "BNRItemStore.h"
 #import "BNRImageStore.h"
 
 @implementation DetailViewController
 
-@synthesize item;
+@synthesize item, dismissBlock;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:@"Wrong Initializer" 
+                                   reason:@"Use ItemForNewItem:"
+                                 userInfo:nil];
+    return nil;
+}
+
+- (id)initForNewItem:(BOOL)isNew {
+    self = [super initWithNibName:@"DetailViewController" bundle:nil];
+    
+    if (self && isNew) {
+        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] 
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+                                     target:self 
+                                     action:@selector(save:)];
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] 
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                       target:self 
+                                       action:@selector(cancel:)];
+        self.navigationItem.rightBarButtonItem = doneItem;
+        self.navigationItem.leftBarButtonItem = cancelItem;
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    UIColor *backgroundColor;
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        backgroundColor = [UIColor colorWithRed:0.875 green:0.88 blue:0.91 alpha:1];
+    } else {
+        backgroundColor = [UIColor groupTableViewBackgroundColor];
+    }
+    self.view.backgroundColor = backgroundColor;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,6 +84,12 @@
 }
 
 - (IBAction)takePicture:(id)sender {
+    if ([imagePickerPopover isPopoverVisible]) {
+        [imagePickerPopover dismissPopoverAnimated:YES];
+        imagePickerPopover = nil;
+        return;
+    }
+    
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -58,10 +98,18 @@
     }
     imagePicker.delegate = self;
     
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        imagePickerPopover.delegate = self;
+        [imagePickerPopover presentPopoverFromBarButtonItem:sender 
+                                   permittedArrowDirections:UIPopoverArrowDirectionAny 
+                                                   animated:YES];
+    } else {
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
-- (void)imagePickerController:(UIImagePickerController *)pickeing
+- (void)imagePickerController:(UIImagePickerController *)picking
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *oldKey = item.imageKey;
     if (oldKey) {
@@ -81,7 +129,12 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     imageView.image = image;
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        [imagePickerPopover dismissPopoverAnimated:YES];
+        imagePickerPopover = nil;
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -91,6 +144,31 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (BOOL)supportedInterfaceOptions {
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        return YES;
+    } else {
+        return UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
+    }
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    NSLog(@"User dismissed popover");
+    imagePickerPopover = nil;
+}
+
+- (void)save:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES 
+                                                      completion:dismissBlock];
+}
+
+- (void)cancel:(id)sender {
+    [[BNRItemStore sharedStore] removeItem:item];
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES 
+                                                      completion:dismissBlock];
 }
 
 @end

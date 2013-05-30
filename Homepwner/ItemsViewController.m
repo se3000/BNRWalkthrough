@@ -2,6 +2,8 @@
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 #import "DetailViewController.h"
+#import "BNRImageStore.h"
+#import "ImageViewController.h"
 
 @implementation ItemsViewController
 
@@ -31,14 +33,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:@"UITableViewCell"];
-    }
-    
     BNRItem *item = [[BNRItemStore.sharedStore allItems] objectAtIndex:[indexPath row]];
-    cell.textLabel.text = [item description];
+    HomepwnerItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomepwnerItemCell"];
+    
+    cell.controller = self;
+    cell.tableView = tableView;
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"%d", item.valueInDollars];
+    cell.thumbnailView.image = item.thumbnail;
     
     return cell;
 }
@@ -102,6 +105,42 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     } else {
         return UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"HomepwnerItemCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"HomepwnerItemCell"];
+}
+
+- (void)showImage:(id)sender atIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Going to show the image for %@", indexPath);
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        BNRItem *displayItem = [[BNRItemStore sharedStore].allItems objectAtIndex:[indexPath row]];
+        NSString *imageKey = [displayItem imageKey];
+        UIImage *image = [[BNRImageStore sharedStore] imageForKey:imageKey];
+        if (!image)
+            return;
+        CGRect rect = [self.view convertRect:[sender bounds] fromView:sender];
+        
+        ImageViewController *ivc = [[ImageViewController alloc] init];
+        ivc.image = image;
+        
+        imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
+        imagePopover.delegate = self;
+        imagePopover.popoverContentSize = CGSizeMake(600, 600);
+        [imagePopover presentPopoverFromRect:rect 
+                                      inView:self.view 
+                    permittedArrowDirections:UIPopoverArrowDirectionAny 
+                                    animated:YES];
+    }
+}
+
+- (void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [imagePopover dismissPopoverAnimated:YES];
+    imagePopover = nil;
 }
 
 @end

@@ -1,7 +1,10 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
+
 @synthesize itemName, containedItem, container, serialNumber, valueInDollars, dateCreated, imageKey;
+@synthesize thumbnail, thumbnailData;
+
 @synthesize items;
 
 + (id)randomItem
@@ -93,6 +96,8 @@
     [aCoder encodeObject:imageKey forKey:@"imageKey"];
     
     [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+    
+    [aCoder encodeObject:thumbnailData forKey:@"thumbnailData"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -104,8 +109,53 @@
         self.valueInDollars = [aDecoder decodeIntForKey:@"valueInDollars"];
 
         dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
+        
+        thumbnailData = [aDecoder decodeObjectForKey:@"thumbnailData"];
     }
     return self;
+}
+
+- (UIImage *)thumbnail {
+    if (!thumbnailData) {
+        return nil;
+    }
+    
+    if (!thumbnail) {
+        thumbnail = [UIImage imageWithData:thumbnailData];
+    }
+    return thumbnail;
+}
+
+- (void)setThumbnailDataFromImage:(UIImage *)image {
+    CGSize originalImageSize = [image size];
+    CGRect newRect = CGRectMake(0, 0, 40, 40);
+    
+    //figure out scaling ratio
+    float ratio = MAX(newRect.size.width / originalImageSize.width, 
+                      newRect.size.height / originalImageSize.height);
+    //create a transparent bitmap context with a scaling factor equal to that of the screen
+    UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
+    //create a rounded rectangle path
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect 
+                                                    cornerRadius:5.0];
+    //make all subsequent drawing clip to this rounded rectangle
+    [path addClip];
+    //center the image
+    CGRect projectRect;
+    projectRect.size.width = ratio * originalImageSize.width;
+    projectRect.size.height = ratio * originalImageSize.height;
+    projectRect.origin.x = (newRect.size.width - projectRect.size.width) / 2.0;
+    projectRect.origin.y = (newRect.size.height - projectRect.size.height) / 2.0;
+    //draw image
+    [image drawInRect:projectRect];
+    //get image from the image context, keep it as thumbnail
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    self.thumbnail = smallImage;
+    //get the PNG representation of the image and set it as our archivable data
+    NSData *data = UIImagePNGRepresentation(smallImage);
+    self.thumbnailData = data;
+    //cleanup image context resources
+    UIGraphicsEndImageContext();
 }
 
 @end

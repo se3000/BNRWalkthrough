@@ -20,6 +20,10 @@
 		923F88A0174AE095004A64BB /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 923F889F174AE095004A64BB /* BNRItem.m */; };
 		923F88A3174AE155004A64BB /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 923F88A2174AE155004A64BB /* BNRItemStore.m */; };
 		929FC69B174EF84700A22EF5 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FC69A174EF84700A22EF5 /* BNRImageStore.m */; };
+		929FC69E1756A4E400A22EF5 /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FC69D1756A4E400A22EF5 /* HomepwnerItemCell.m */; };
+		929FC6A01756A6D300A22EF5 /* HomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FC69F1756A6D200A22EF5 /* HomepwnerItemCell.xib */; };
+		92AC848A1756C45F00F7098B /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AC84881756C45F00F7098B /* ImageViewController.m */; };
+		92AC848B1756C45F00F7098B /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AC84891756C45F00F7098B /* ImageViewController.xib */; };
 		92F80DA6174D85E20065CD2C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F80DA4174D85E20065CD2C /* DetailViewController.m */; };
 		92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F80DA5174D85E20065CD2C /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -46,6 +50,12 @@
 		923F88A2174AE155004A64BB /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 		929FC699174EF84700A22EF5 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
 		929FC69A174EF84700A22EF5 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
+		929FC69C1756A4E300A22EF5 /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
+		929FC69D1756A4E400A22EF5 /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
+		929FC69F1756A6D200A22EF5 /* HomepwnerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepwnerItemCell.xib; sourceTree = "<group>"; };
+		92AC84871756C45F00F7098B /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		92AC84881756C45F00F7098B /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		92AC84891756C45F00F7098B /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		92F80DA3174D85E20065CD2C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		92F80DA4174D85E20065CD2C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		92F80DA5174D85E20065CD2C /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -102,12 +112,18 @@
 				923F88A1174AE155004A64BB /* BNRItemStore.h */,
 				923F88A2174AE155004A64BB /* BNRItemStore.m */,
 				92102013174ADB6900E794B3 /* HomepwnerAppDelegate.h */,
+				929FC69C1756A4E300A22EF5 /* HomepwnerItemCell.h */,
+				929FC69D1756A4E400A22EF5 /* HomepwnerItemCell.m */,
+				929FC69F1756A6D200A22EF5 /* HomepwnerItemCell.xib */,
 				92102014174ADB6900E794B3 /* HomepwnerAppDelegate.m */,
 				92F80DA3174D85E20065CD2C /* DetailViewController.h */,
 				92F80DA4174D85E20065CD2C /* DetailViewController.m */,
 				92F80DA5174D85E20065CD2C /* DetailViewController.xib */,
 				929FC699174EF84700A22EF5 /* BNRImageStore.h */,
 				929FC69A174EF84700A22EF5 /* BNRImageStore.m */,
+				92AC84871756C45F00F7098B /* ImageViewController.h */,
+				92AC84881756C45F00F7098B /* ImageViewController.m */,
+				92AC84891756C45F00F7098B /* ImageViewController.xib */,
 				9210200B174ADB6900E794B3 /* Supporting Files */,
 			);
 			path = Homepwner;
@@ -184,6 +200,8 @@
 				92102019174ADB6900E794B3 /* Default@2x.png in Resources */,
 				9210201B174ADB6900E794B3 /* Default-568h@2x.png in Resources */,
 				92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */,
+				929FC6A01756A6D300A22EF5 /* HomepwnerItemCell.xib in Resources */,
+				92AC848B1756C45F00F7098B /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +219,8 @@
 				923F88A3174AE155004A64BB /* BNRItemStore.m in Sources */,
 				92F80DA6174D85E20065CD2C /* DetailViewController.m in Sources */,
 				929FC69B174EF84700A22EF5 /* BNRImageStore.m in Sources */,
+				929FC69E1756A4E400A22EF5 /* HomepwnerItemCell.m in Sources */,
+				92AC848A1756C45F00F7098B /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

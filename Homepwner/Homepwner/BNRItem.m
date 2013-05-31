@@ -1,129 +1,38 @@
+//
+//  BNRItem.m
+//  Homepwner
+//
+//  Created by Steve Ellis on 5/30/13.
+//  Copyright (c) 2013 Steve Ellis. All rights reserved.
+//
+
 #import "BNRItem.h"
+
 
 @implementation BNRItem
 
-@synthesize itemName, containedItem, container, serialNumber, valueInDollars, dateCreated, imageKey;
-@synthesize thumbnail, thumbnailData;
+@dynamic itemName;
+@dynamic serialNumber;
+@dynamic valueInDollars;
+@dynamic dateCreated;
+@dynamic imageKey;
+@dynamic thumbnailData;
+@dynamic thumbnail;
+@dynamic orderingValue;
+@dynamic assetType;
 
-@synthesize items;
-
-+ (id)randomItem
-{
-    NSArray *randomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
-                                                             @"Rusty",
-                                                             @"Shiny", nil];
-    NSArray *randomNounList = [NSArray arrayWithObjects:@"Bear",
-                                                        @"Spork",
-                                                        @"Mac", nil];
-    NSInteger adjectiveIndex = rand() % [randomAdjectiveList count];
-    NSInteger nounIndex = rand() % [randomNounList count];
+- (void)awakeFromFetch {
+    [super awakeFromFetch];
     
-    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
-                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
-                            [randomNounList objectAtIndex:nounIndex]];
-    int randomValue = rand() % 100;
-    
-    NSString *randomSerialNumber = [NSString stringWithFormat:@"%c%c%c%c%c",
-                                    '0' + rand() % 10,
-                                    'A' + rand() % 26,
-                                    '0' + rand() % 10,
-                                    'A' + rand() % 26,
-                                    '0' + rand() % 10];
-    
-    BNRItem *newItem = [[self alloc] initWithItemName:randomName
-                                      valueInDollars:randomValue 
-                                        serialNumber:randomSerialNumber];
-    
-    return newItem;
+    UIImage *tn = [UIImage imageWithData:self.thumbnailData];
+    [self setPrimitiveValue:tn forKey:@"thumbnail"];
 }
 
-- (id)initWithItemName:(NSString *)name
-        valueInDollars:(int)value
-          serialNumber:(NSString *)sNumber
-{
-    self = [super init];
-    if (self) {
-        [self setItemName:name];
-        [self setValueInDollars:value];
-        [self setSerialNumber:sNumber];
-        dateCreated = [[NSDate alloc] init];
-    }
+- (void)awakeFromInsert {
+    [super awakeFromInsert];
     
-    return self;
-}
-
-- (id)init
-{
-    return [self initWithItemName:@"Item" 
-                   valueInDollars:0 
-                     serialNumber:@""];
-}
-
-- (id)initWithItemName:(NSString *)name 
-          serialNumber:(NSString *)sNumber
-{
-    return [self initWithItemName:name 
-                   valueInDollars:0
-                     serialNumber:sNumber];
-}
-
-- (void)setContainedItem:(BNRItem *)item
-{
-    containedItem = item;
-    [item setContainer:self];
-}
-
-- (NSString *)description
-{
-    NSString *descriptionString = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@",
-                                                       itemName,
-                                                       serialNumber,
-                                                       [self valueInDollars],
-                                                       dateCreated];
-    
-    return descriptionString;
-}
-
-- (void)dealloc
-{
-    NSLog(@"Destroyed: %@", self);
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:itemName forKey:@"itemName"];
-    [aCoder encodeObject:serialNumber forKey:@"serialNumber"];
-    [aCoder encodeObject:dateCreated forKey:@"dateCreated"];
-    [aCoder encodeObject:imageKey forKey:@"imageKey"];
-    
-    [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
-    
-    [aCoder encodeObject:thumbnailData forKey:@"thumbnailData"];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    if (self) {
-        self.itemName = [aDecoder decodeObjectForKey:@"itemName"];
-        self.serialNumber = [aDecoder decodeObjectForKey:@"serialNumber"];
-        self.imageKey = [aDecoder decodeObjectForKey:@"imageKey"];
-        self.valueInDollars = [aDecoder decodeIntForKey:@"valueInDollars"];
-
-        dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
-        
-        thumbnailData = [aDecoder decodeObjectForKey:@"thumbnailData"];
-    }
-    return self;
-}
-
-- (UIImage *)thumbnail {
-    if (!thumbnailData) {
-        return nil;
-    }
-    
-    if (!thumbnail) {
-        thumbnail = [UIImage imageWithData:thumbnailData];
-    }
-    return thumbnail;
+    NSTimeInterval time = [[NSDate date] timeIntervalSinceReferenceDate];
+    [self setDateCreated:time];
 }
 
 - (void)setThumbnailDataFromImage:(UIImage *)image {
@@ -131,12 +40,12 @@
     CGRect newRect = CGRectMake(0, 0, 40, 40);
     
     //figure out scaling ratio
-    float ratio = MAX(newRect.size.width / originalImageSize.width, 
+    float ratio = MAX(newRect.size.width / originalImageSize.width,
                       newRect.size.height / originalImageSize.height);
     //create a transparent bitmap context with a scaling factor equal to that of the screen
     UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
     //create a rounded rectangle path
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect 
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect
                                                     cornerRadius:5.0];
     //make all subsequent drawing clip to this rounded rectangle
     [path addClip];

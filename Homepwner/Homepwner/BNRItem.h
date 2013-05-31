@@ -1,26 +1,27 @@
+//
+//  BNRItem.h
+//  Homepwner
+//
+//  Created by Steve Ellis on 5/30/13.
+//  Copyright (c) 2013 Steve Ellis. All rights reserved.
+//
+
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface BNRItem : NSObject <NSCoding>
 
-+ (id)randomItem;
+@interface BNRItem : NSManagedObject
 
-- (id)initWithItemName:(NSString *)name
-        valueInDollars:(int)value
-          serialNumber:(NSString *)sNumber;
-- (id)initWithItemName:(NSString *)name 
-          serialNumber:(NSString *)sNumber;
-- (void)setThumbnailDataFromImage:(UIImage *)image;
-
-@property (nonatomic, strong) BNRItem *containedItem;
-@property (nonatomic, weak) BNRItem *container;
-@property (nonatomic, copy) NSString *itemName;
-@property (nonatomic, copy) NSString *serialNumber;
-@property (nonatomic) int valueInDollars;
-@property (nonatomic, readonly, strong) NSDate *dateCreated;
-@property (nonatomic, copy) NSString *imageKey;
+@property (nonatomic, retain) NSString *itemName;
+@property (nonatomic, retain) NSString *serialNumber;
+@property (nonatomic) int32_t valueInDollars;
+@property (nonatomic) NSTimeInterval dateCreated;
+@property (nonatomic, retain) NSString *imageKey;
+@property (nonatomic, retain) NSData *thumbnailData;
 @property (nonatomic, strong) UIImage *thumbnail;
-@property (nonatomic, strong) NSData *thumbnailData;
+@property (nonatomic) double orderingValue;
+@property (nonatomic, retain) NSManagedObject *assetType;
 
-@property (nonatomic, strong) NSMutableArray *items;
+- (void)setThumbnailDataFromImage:(UIImage *)image;
 
 @end

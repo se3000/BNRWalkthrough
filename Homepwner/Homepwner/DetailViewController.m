@@ -2,6 +2,7 @@
 #import "BNRItem.h"
 #import "BNRItemStore.h"
 #import "BNRImageStore.h"
+#import "AssetTypePicker.h"
 
 @implementation DetailViewController
 
@@ -56,7 +57,8 @@
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     
-    dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:item.dateCreated];
+    dateLabel.text = [dateFormatter stringFromDate:date];
     
     NSString *imageKey = [item imageKey];
     
@@ -66,6 +68,13 @@
     } else {
         [imageView setImage:nil];
     }
+    
+    NSString *typeLabel = [item.assetType valueForKey:@"label"];
+    if (!typeLabel)
+        typeLabel = @"None";
+    
+    [assetTypeButton setTitle:[NSString stringWithFormat:@"Type: %@", typeLabel]
+                     forState:UIControlStateNormal];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -146,6 +155,33 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (IBAction)showAssetTypePicker:(id)sender {
+    if ([assetTypePickerPopover isPopoverVisible]) {
+        [assetTypePickerPopover dismissPopoverAnimated:YES];
+        assetTypePickerPopover = nil;
+        return;
+    }
+    [self.view endEditing:YES];
+    AssetTypePicker *assetTypePicker = [[AssetTypePicker alloc] init];
+    assetTypePicker.item = item;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        assetTypePickerPopover = [[UIPopoverController alloc] initWithContentViewController:assetTypePicker];
+        assetTypePickerPopover.delegate = self;
+        
+        CGRect rect = [self.view convertRect:[sender bounds] fromView:sender];
+
+        assetTypePickerPopover.popoverContentSize = CGSizeMake(300, 300);
+        [assetTypePickerPopover presentPopoverFromRect:rect
+                                                inView:self.view 
+                              permittedArrowDirections:UIPopoverArrowDirectionAny
+                                              animated:YES];
+    } else {
+        [self.navigationController pushViewController:assetTypePicker
+                                             animated:YES];
+    }
 }
 
 - (BOOL)supportedInterfaceOptions {

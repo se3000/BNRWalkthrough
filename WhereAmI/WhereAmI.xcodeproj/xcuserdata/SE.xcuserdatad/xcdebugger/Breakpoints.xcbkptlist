@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WhereAmI/WhereAmIViewController.m"
-         timestampString = "380518885.148384"
+         timestampString = "391813338.373775"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "4"
-         endingLineNumber = "4"
+         startingLineNumber = "6"
+         endingLineNumber = "6"
          landmarkName = "@implementation WhereAmIViewController"
          landmarkType = "3">
       </FileBreakpoint>

@@ -1,7 +1,16 @@
 #import "WhereAmIViewController.h"
 #import "BNRMapPoint.h"
 
+NSString * const WhereAmIMapTypePrefKey = @"WhereAmIMapTypePreference";
+
 @implementation WhereAmIViewController
+
++ (void)initialize {
+    NSDictionary *defaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] 
+                                                         forKey:WhereAmIMapTypePrefKey];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:(NSBundle *)nibBundleOrNil];
@@ -37,6 +46,10 @@
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
+    
+    NSInteger mapTypeValue = [[NSUserDefaults standardUserDefaults] integerForKey:WhereAmIMapTypePrefKey];
+    [mapTypeControl setSelectedSegmentIndex:mapTypeValue];
+    [self changeMapType:mapTypeControl];
 }
 
 - (void)dealloc
@@ -82,6 +95,23 @@
     [activityIndicator stopAnimating];
     [locationTitleField setHidden:NO];
     [locationManager stopUpdatingLocation];
+}
+
+- (IBAction)changeMapType:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setInteger:[sender selectedSegmentIndex] 
+                                               forKey:WhereAmIMapTypePrefKey];
+    
+    switch ([sender selectedSegmentIndex]) {
+        case 0: {
+            worldView.mapType = MKMapTypeStandard;
+        } break;
+        case 1: {
+            worldView.mapType = MKMapTypeSatellite;
+        } break;
+        case 2: {
+            worldView.mapType = MKMapTypeHybrid;
+        } break;
+    }
 }
 
 @end

@@ -11,7 +11,7 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        self.navigationItem.title = @"Homepwner";
+        self.navigationItem.title = NSLocalizedString(@"Homepwner", @"Name of the application");
         
         UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                      target:self

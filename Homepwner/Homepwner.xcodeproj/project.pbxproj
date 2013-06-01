@@ -18,6 +18,8 @@
 		9210201B174ADB6900E794B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9210201A174ADB6900E794B3 /* Default-568h@2x.png */; };
 		92102023174ADCF000E794B3 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92102022174ADCF000E794B3 /* ItemsViewController.m */; };
 		923F88A3174AE155004A64BB /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 923F88A2174AE155004A64BB /* BNRItemStore.m */; };
+		92902A1617595815009FB8DB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92902A1817595815009FB8DB /* DetailViewController.xib */; };
+		92902A1C175A6CD7009FB8DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92902A1E175A6CD7009FB8DB /* Localizable.strings */; };
 		929FC69B174EF84700A22EF5 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FC69A174EF84700A22EF5 /* BNRImageStore.m */; };
 		929FC69E1756A4E400A22EF5 /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FC69D1756A4E400A22EF5 /* HomepwnerItemCell.m */; };
 		929FC6A01756A6D300A22EF5 /* HomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FC69F1756A6D200A22EF5 /* HomepwnerItemCell.xib */; };
@@ -28,7 +30,6 @@
 		92AC84961757F04700F7098B /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AC84951757F04700F7098B /* BNRItem.m */; };
 		92AC849917580ADB00F7098B /* AssetTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AC849817580ADB00F7098B /* AssetTypePicker.m */; };
 		92F80DA6174D85E20065CD2C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F80DA4174D85E20065CD2C /* DetailViewController.m */; };
-		92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F80DA5174D85E20065CD2C /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,11 @@
 		92102022174ADCF000E794B3 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsViewController.m; path = ../ItemsViewController.m; sourceTree = "<group>"; };
 		923F88A1174AE155004A64BB /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		923F88A2174AE155004A64BB /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		92902A15175957E7009FB8DB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92902A1717595815009FB8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		92902A191759581B009FB8DB /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		92902A1D175A6CD7009FB8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		92902A1F175A6CE0009FB8DB /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		929FC699174EF84700A22EF5 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
 		929FC69A174EF84700A22EF5 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		929FC69C1756A4E300A22EF5 /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
@@ -65,7 +71,6 @@
 		92AC849817580ADB00F7098B /* AssetTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetTypePicker.m; path = ../AssetTypePicker.m; sourceTree = "<group>"; };
 		92F80DA3174D85E20065CD2C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		92F80DA4174D85E20065CD2C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		92F80DA5174D85E20065CD2C /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,7 @@
 		9210200B174ADB6900E794B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				92902A1E175A6CD7009FB8DB /* Localizable.strings */,
 				9210200C174ADB6900E794B3 /* Homepwner-Info.plist */,
 				9210200D174ADB6900E794B3 /* InfoPlist.strings */,
 				92102010174ADB6900E794B3 /* main.m */,
@@ -159,7 +165,7 @@
 			children = (
 				92AC84891756C45F00F7098B /* ImageViewController.xib */,
 				929FC69F1756A6D200A22EF5 /* HomepwnerItemCell.xib */,
-				92F80DA5174D85E20065CD2C /* DetailViewController.xib */,
+				92902A1817595815009FB8DB /* DetailViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 92101FF8174ADB6900E794B3;
 			productRefGroup = 92102002174ADB6900E794B3 /* Products */;
@@ -235,9 +242,10 @@
 				92102017174ADB6900E794B3 /* Default.png in Resources */,
 				92102019174ADB6900E794B3 /* Default@2x.png in Resources */,
 				9210201B174ADB6900E794B3 /* Default-568h@2x.png in Resources */,
-				92F80DA7174D85E20065CD2C /* DetailViewController.xib in Resources */,
+				92902A1617595815009FB8DB /* DetailViewController.xib in Resources */,
 				929FC6A01756A6D300A22EF5 /* HomepwnerItemCell.xib in Resources */,
 				92AC848B1756C45F00F7098B /* ImageViewController.xib in Resources */,
+				92902A1C175A6CD7009FB8DB /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +277,28 @@
 			isa = PBXVariantGroup;
 			children = (
 				9210200E174ADB6900E794B3 /* en */,
+				92902A15175957E7009FB8DB /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
+		};
+		92902A1817595815009FB8DB /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92902A1717595815009FB8DB /* en */,
+				92902A191759581B009FB8DB /* es */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		92902A1E175A6CD7009FB8DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92902A1D175A6CD7009FB8DB /* en */,
+				92902A1F175A6CE0009FB8DB /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 

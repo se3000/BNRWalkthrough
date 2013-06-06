@@ -24,6 +24,7 @@
 		92518368170F26D000228BCE /* Hypno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92518364170F26D000228BCE /* Hypno@2x.png */; };
 		92518369170F26D000228BCE /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = 92518365170F26D000228BCE /* Time.png */; };
 		9251836A170F26D000228BCE /* Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92518366170F26D000228BCE /* Time@2x.png */; };
+		92FECC6C1761378D0063DE28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FECC6B1761378D0063DE28 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		92518364170F26D000228BCE /* Hypno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hypno@2x.png"; sourceTree = "<group>"; };
 		92518365170F26D000228BCE /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		92518366170F26D000228BCE /* Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time@2x.png"; sourceTree = "<group>"; };
+		92FECC6B1761378D0063DE28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FECC6C1761378D0063DE28 /* QuartzCore.framework in Frameworks */,
 				9251833C170E5D6600228BCE /* UIKit.framework in Frameworks */,
 				9251833E170E5D6600228BCE /* Foundation.framework in Frameworks */,
 				92518340170E5D6600228BCE /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +73,7 @@
 		9251832F170E5D6600228BCE = {
 			isa = PBXGroup;
 			children = (
+				92FECC6B1761378D0063DE28 /* QuartzCore.framework */,
 				92518363170F26D000228BCE /* Hypno.png */,
 				92518364170F26D000228BCE /* Hypno@2x.png */,
 				92518365170F26D000228BCE /* Time.png */,
@@ -319,6 +323,7 @@
 				92518357170E5D6600228BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

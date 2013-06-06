@@ -10,6 +10,21 @@
     if (self) {
         [self setBackgroundColor: [UIColor clearColor]];
         [self setCircleColor:[UIColor lightGrayColor]];
+        
+        boxLayer = [[CALayer alloc] init];
+        boxLayer.bounds = CGRectMake(0.0, 0.0, 85.0, 85.0);
+        boxLayer.position = CGPointMake(160.0, 100.0);
+        UIColor *reddish = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
+        CGColorRef cgReddish = [reddish CGColor];
+        boxLayer.backgroundColor = cgReddish;
+        
+        UIImage *layerImage = [UIImage imageNamed:@"Hypno.png"];
+        CGImageRef image = [layerImage CGImage];
+        boxLayer.contents = (__bridge id)image;
+        boxLayer.contentsRect = CGRectMake(-0.1, -0.1, 1.2, 1.2);
+        boxLayer.contentsGravity = kCAGravityResizeAspect;
+        
+        [self.layer addSublayer:boxLayer];
     }
     
     return self;
@@ -73,6 +88,26 @@
         NSLog(@"Device started shaking!");
         [self setCircleColor:[UIColor redColor]];
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches 
+           withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    
+    boxLayer.position = point;
+}
+
+- (void)touchesMoved:(NSSet *)touches 
+           withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    CGPoint point = [touch locationInView:self];
+    [CATransaction commit];
+    
+    boxLayer.position = point;
 }
 
 @end

@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		920325DF1763F03D00B1AA5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920325DE1763F03D00B1AA5C /* UIKit.framework */; };
+		920325E11763F03D00B1AA5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920325E01763F03D00B1AA5C /* Foundation.framework */; };
+		920325E31763F03D00B1AA5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920325E21763F03D00B1AA5C /* CoreGraphics.framework */; };
+		920325E91763F03D00B1AA5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 920325E71763F03D00B1AA5C /* InfoPlist.strings */; };
+		920325EB1763F03D00B1AA5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 920325EA1763F03D00B1AA5C /* main.m */; };
+		920325EF1763F03D00B1AA5C /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 920325EE1763F03D00B1AA5C /* BNRAppDelegate.m */; };
+		920325F11763F03D00B1AA5C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 920325F01763F03D00B1AA5C /* Default.png */; };
+		920325F31763F03D00B1AA5C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 920325F21763F03D00B1AA5C /* Default@2x.png */; };
+		920325F51763F03D00B1AA5C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 920325F41763F03D00B1AA5C /* Default-568h@2x.png */; };
+		920325FC1763F09F00B1AA5C /* Storytime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920325FB1763F09F00B1AA5C /* Storytime.storyboard */; };
+		920325FF1763F5F800B1AA5C /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920325FE1763F5F800B1AA5C /* ModalViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		920325DB1763F03D00B1AA5C /* Storytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		920325DE1763F03D00B1AA5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		920325E01763F03D00B1AA5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		920325E21763F03D00B1AA5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		920325E61763F03D00B1AA5C /* Storytime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Storytime-Info.plist"; sourceTree = "<group>"; };
+		920325E81763F03D00B1AA5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		920325EA1763F03D00B1AA5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		920325EC1763F03D00B1AA5C /* Storytime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Storytime-Prefix.pch"; sourceTree = "<group>"; };
+		920325ED1763F03D00B1AA5C /* BNRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
+		920325EE1763F03D00B1AA5C /* BNRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRAppDelegate.m; sourceTree = "<group>"; };
+		920325F01763F03D00B1AA5C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		920325F21763F03D00B1AA5C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		920325F41763F03D00B1AA5C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		920325FB1763F09F00B1AA5C /* Storytime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storytime.storyboard; sourceTree = "<group>"; };
+		920325FD1763F5F800B1AA5C /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		920325FE1763F5F800B1AA5C /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		920325D81763F03D00B1AA5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920325DF1763F03D00B1AA5C /* UIKit.framework in Frameworks */,
+				920325E11763F03D00B1AA5C /* Foundation.framework in Frameworks */,
+				920325E31763F03D00B1AA5C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		920325D21763F03D00B1AA5C = {
+			isa = PBXGroup;
+			children = (
+				920325FB1763F09F00B1AA5C /* Storytime.storyboard */,
+				920325E41763F03D00B1AA5C /* Storytime */,
+				920325DD1763F03D00B1AA5C /* Frameworks */,
+				920325DC1763F03D00B1AA5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		920325DC1763F03D00B1AA5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				920325DB1763F03D00B1AA5C /* Storytime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		920325DD1763F03D00B1AA5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				920325DE1763F03D00B1AA5C /* UIKit.framework */,
+				920325E01763F03D00B1AA5C /* Foundation.framework */,
+				920325E21763F03D00B1AA5C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		920325E41763F03D00B1AA5C /* Storytime */ = {
+			isa = PBXGroup;
+			children = (
+				920325FD1763F5F800B1AA5C /* ModalViewController.h */,
+				920325FE1763F5F800B1AA5C /* ModalViewController.m */,
+				920325ED1763F03D00B1AA5C /* BNRAppDelegate.h */,
+				920325EE1763F03D00B1AA5C /* BNRAppDelegate.m */,
+				920325E51763F03D00B1AA5C /* Supporting Files */,
+			);
+			path = Storytime;
+			sourceTree = "<group>";
+		};
+		920325E51763F03D00B1AA5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				920325E61763F03D00B1AA5C /* Storytime-Info.plist */,
+				920325E71763F03D00B1AA5C /* InfoPlist.strings */,
+				920325EA1763F03D00B1AA5C /* main.m */,
+				920325EC1763F03D00B1AA5C /* Storytime-Prefix.pch */,
+				920325F01763F03D00B1AA5C /* Default.png */,
+				920325F21763F03D00B1AA5C /* Default@2x.png */,
+				920325F41763F03D00B1AA5C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		920325DA1763F03D00B1AA5C /* Storytime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 920325F81763F03D00B1AA5C /* Build configuration list for PBXNativeTarget "Storytime" */;
+			buildPhases = (
+				920325D71763F03D00B1AA5C /* Sources */,
+				920325D81763F03D00B1AA5C /* Frameworks */,
+				920325D91763F03D00B1AA5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Storytime;
+			productName = Storytime;
+			productReference = 920325DB1763F03D00B1AA5C /* Storytime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		920325D31763F03D00B1AA5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BNR;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Steve Ellis";
+			};
+			buildConfigurationList = 920325D61763F03D00B1AA5C /* Build configuration list for PBXProject "Storytime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 920325D21763F03D00B1AA5C;
+			productRefGroup = 920325DC1763F03D00B1AA5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				920325DA1763F03D00B1AA5C /* Storytime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		920325D91763F03D00B1AA5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920325E91763F03D00B1AA5C /* InfoPlist.strings in Resources */,
+				920325F11763F03D00B1AA5C /* Default.png in Resources */,
+				920325F31763F03D00B1AA5C /* Default@2x.png in Resources */,
+				920325F51763F03D00B1AA5C /* Default-568h@2x.png in Resources */,
+				920325FC1763F09F00B1AA5C /* Storytime.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		920325D71763F03D00B1AA5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920325EB1763F03D00B1AA5C /* main.m in Sources */,
+				920325EF1763F03D00B1AA5C /* BNRAppDelegate.m in Sources */,
+				920325FF1763F5F800B1AA5C /* ModalViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		920325E71763F03D00B1AA5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				920325E81763F03D00B1AA5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		920325F61763F03D00B1AA5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		920325F71763F03D00B1AA5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		920325F91763F03D00B1AA5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Storytime/Storytime-Prefix.pch";
+				INFOPLIST_FILE = "Storytime/Storytime-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		920325FA1763F03D00B1AA5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Storytime/Storytime-Prefix.pch";
+				INFOPLIST_FILE = "Storytime/Storytime-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		920325D61763F03D00B1AA5C /* Build configuration list for PBXProject "Storytime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				920325F61763F03D00B1AA5C /* Debug */,
+				920325F71763F03D00B1AA5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		920325F81763F03D00B1AA5C /* Build configuration list for PBXNativeTarget "Storytime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				920325F91763F03D00B1AA5C /* Debug */,
+				920325FA1763F03D00B1AA5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 920325D31763F03D00B1AA5C /* Project object */;
+}

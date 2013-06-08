@@ -4,5 +4,10 @@
 {
     __weak IBOutlet UILabel *timeLabel;
 }
+
 - (IBAction)showCurrentTime:(id)sender;
+
+- (void)spinTimeLabel;
+- (void)bounceTimeLabel;
+
 @end
